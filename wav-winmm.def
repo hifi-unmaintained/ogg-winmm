@@ -1,13 +1,13 @@
-LIBRARY wav-winmm.dll
+LIBRARY winmm.dll
 
 EXPORTS
     aux32Message                     = "system32\\winmm".aux32Message
-    auxGetDevCapsA                   = "system32\\winmm".auxGetDevCapsA
+    auxGetDevCapsA                   = fake_auxGetDevCapsA
     auxGetDevCapsW                   = "system32\\winmm".auxGetDevCapsW
-    auxGetNumDevs                    = "system32\\winmm".auxGetNumDevs
-    auxGetVolume                     = "system32\\winmm".auxGetVolume
+    auxGetNumDevs                    = fake_auxGetNumDevs
+    auxGetVolume                     = fake_auxGetVolume
     auxOutMessage                    = "system32\\winmm".auxOutMessage
-    auxSetVolume                     = "system32\\winmm".auxSetVolume
+    auxSetVolume                     = fake_auxSetVolume
     CloseDriver                      = "system32\\winmm".CloseDriver
     DefDriverProc                    = "system32\\winmm".DefDriverProc
     DriverCallback                   = "system32\\winmm".DriverCallback
