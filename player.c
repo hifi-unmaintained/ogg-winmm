@@ -51,6 +51,20 @@ void plr_volume(int vol)
     plr_vol = vol;
 }
 
+int plr_length(const char *path)
+{
+    OggVorbis_File  vf;
+
+    if (ov_fopen(path, &vf) != 0)
+        return 0;
+
+    int ret = (int)ov_time_total(&vf, -1);
+
+    ov_clear(&vf);
+
+    return ret;
+}
+
 int plr_play(const char *path)
 {
     plr_stop();

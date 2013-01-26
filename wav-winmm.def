@@ -41,7 +41,7 @@ EXPORTS
     mciLoadCommandResource           = "system32\\winmm".mciLoadCommandResource
     mciSendCommandA                  = fake_mciSendCommandA
     mciSendCommandW                  = "system32\\winmm".mciSendCommandW
-    mciSendStringA                   = "system32\\winmm".mciSendStringA
+    mciSendStringA                   = fake_mciSendStringA
     mciSendStringW                   = "system32\\winmm".mciSendStringW
     mciSetDriverData                 = "system32\\winmm".mciSetDriverData
     mciSetYieldProc                  = "system32\\winmm".mciSetYieldProc
