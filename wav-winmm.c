@@ -210,7 +210,7 @@ MCIERROR WINAPI fake_mciSendCommandA(MCIDEVICEID IDDevice, UINT uMsg, DWORD_PTR 
 
     }
 
-    if (IDDevice == MAGIC_DEVICEID || IDDevice == 0)
+    if (IDDevice == MAGIC_DEVICEID || IDDevice == 0 || IDDevice == 0xFFFFFFFF)
     {
         if (uMsg == MCI_SET)
         {
